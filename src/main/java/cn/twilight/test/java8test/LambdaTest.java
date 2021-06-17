@@ -1,5 +1,10 @@
 package cn.twilight.test.java8test;
 
+import org.omg.CORBA.MARSHAL;
+import org.omg.PortableInterceptor.INACTIVE;
+
+import java.util.function.BiFunction;
+
 /**
  * 测试lambda表达式用法
  *
@@ -13,7 +18,12 @@ public class LambdaTest {
     //外层局部变量
     public static String salutation = "hello";
 
+    //该方法中的参数是一个函数式接口
+    public static int be(BiFunction<Integer,Integer,Integer> be){
+        return 1;
+    }
     public static void main(String[] args) {
+
         MathOperation add = (a,b) -> a+b;
         MathOperation sub = (a,b) -> a-b;
         MathOperation mul = (a,b) -> a*b;
@@ -28,7 +38,8 @@ public class LambdaTest {
 
         GreetingService sayHello2 = message -> System.out.println(salutation + message);
         sayHello2.greeting("world!!!!");
-        }
+
+    }
 
     private static int doOperation(int a,int b,MathOperation op){
         return op.operation(a,b);
@@ -41,3 +52,4 @@ interface MathOperation{
 interface GreetingService{
     void greeting(String message);
 }
+
