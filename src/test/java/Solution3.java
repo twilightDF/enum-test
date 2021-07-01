@@ -42,18 +42,16 @@ public class Solution3 {
             integers.add(Num.getNum(chars[i]));
         }
 
-        for(int i = 0;i < integers.size(); i ++){
-            //防止数组下标越界
-            if(i != integers.size()-1){
+        //防止数组下标越界
+        for(int i = 0;i < integers.size()-1; i ++){
                 if (integers.get(i) >= integers.get(i+1)){
                     sum += integers.get(i);
                 }else{
                     sum += integers.get(i+1)-integers.get(i);
                     i++;
                 }
-            }else
-                sum += integers.get(i);
-        }
+            }
+        sum += integers.get(integers.size() - 1);
         return sum;
     }
 }
