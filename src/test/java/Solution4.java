@@ -19,7 +19,7 @@ public class Solution4 {
         // *(比较完毕后,若flag为true,result拼接上次字符,否则直接返回)
         //3.获取第一个字符串的第二个字符
         //4.同步骤2,只是与每个字符串的第二个字符作比较
-        //5.直到
+        //5.直到获取到某一个字符串的最大长度结束
         String result = "";
         char c;
         char b;
