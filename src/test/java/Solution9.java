@@ -3,8 +3,10 @@ import org.junit.Test;
 public class Solution9 {
     @Test
     public void test01(){
-        String haystack = "legalization";
-        String needle = "gal";
+        String haystack = "jkdajkdla";
+        String needle = "da";
+
+        System.out.println(haystack.indexOf(needle));
         System.out.println(strStr(haystack, needle));
     }
 
