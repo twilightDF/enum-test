@@ -4,7 +4,7 @@ public class Solution9 {
     @Test
     public void test01(){
         String haystack = "jkdajkdla";
-        String needle = "da";
+        String needle = "d";
 
         System.out.println(haystack.indexOf(needle));
         System.out.println(strStr(haystack, needle));
