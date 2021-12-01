@@ -30,8 +30,8 @@ public class Solution3 {
 
     @Test
     public void test01(){
-        String str = "MMcCCxCi";
-        System.out.println(str + "-->" + romanToInt(str.toUpperCase()));
+        String str = "ix";
+        System.out.println(str + "  -->  " + romanToInt(str.toUpperCase()));
     }
 
     public int romanToInt(String s) {
@@ -43,15 +43,18 @@ public class Solution3 {
         }
 
         //防止数组下标越界
-        for(int i = 0;i < integers.size()-1; i ++){
+        for(int i = 0;i < integers.size(); i ++){
+            //防止数组下标越界
+            if(i != integers.size()-1){
                 if (integers.get(i) >= integers.get(i+1)){
                     sum += integers.get(i);
                 }else{
                     sum += integers.get(i+1)-integers.get(i);
                     i++;
                 }
-            }
-        sum += integers.get(integers.size() - 1);
+            }else
+                sum += integers.get(i);
+        }
         return sum;
     }
 }
