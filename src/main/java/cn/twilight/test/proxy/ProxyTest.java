@@ -42,4 +42,6 @@ public class ProxyTest {
         DemoCglibTarget proxy = (DemoCglibTarget)cglibInterceptor.getProxy();
         proxy.handle();
     }
+
 }
+
