@@ -19,6 +19,7 @@
         <module>micro-services-8091</module>
         <module>micro-services-8092</module>
         <module>micro-services-8093</module>
+        <module>basic-web</module>
     </modules>
 
     <properties>
